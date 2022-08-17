@@ -1,0 +1,589 @@
+<?php
+session_start();
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+   
+  
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+      <script>
+    function LIVE(){
+        window.open("mymatches.php","_parent");
+    }
+    function COMPLETED(){
+        window.open("mymatches.php","_parent");
+    }
+    </script>
+      
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" >
+  
+   
+    
+    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+  rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">  
+      
+      <!-- Custom styles for this template -->
+
+  </head>
+  <body style="background: 	#222;" >
+  <header >
+  <nav class="navigation">
+    <ul>
+       <li>  <a class="navbar-brand" href="userindex.php" style="text-decoration: none;color: white;">  <i class="fas fa-arrow-left" style="width=32; height=32;margin-right: 4px;"></i> My Matches </a></li>
+      
+    </ul>
+  </nav>
+</header>
+   <div class="nav">
+          
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" style="border-radius: 10px;margin-right: 10px;" onclick="LIVE()">LIVE</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" style="border-radius: 10px;margin-right: 10px;" onclick="COMPLETED()">COMPLETED</button>
+          </div>
+       
+   
+
+  <!--     
+      </div>
+    </div>-->
+
+
+ <hr >
+<?php
+if(!isset($_SESSION['uid']))
+{
+  header('location:../indexnew.php');
+  exit;
+}
+else{
+?>
+<!--html ka kaam yha se chla hai chlra-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Matches</title>
+</head>
+<body><!--
+<table align="center" width="100%" border="2" style="margin-top:10px;">
+ <tr style="background-color:#000; color:#fff;">
+
+    <th>ID</th>
+    <th>SN</th>
+    <th>Team_leader</th> 
+    <th>Team_Name</th>
+    <th>Game</th>
+    <th>Game id</th>
+    <th>p1id</th>
+    <th>p2id</th> 
+    <th>p3id</th>
+    <th>p4id</th>
+    <th>Transection</th>
+    <th>Date</th>
+    <th>Total Kill</th> 
+    <th> Winning</th>
+    <th> Rank</th>
+    <th> Slot</th>
+    <th> Type</th>
+ </tr>-->
+ <!--- php data fatching.....-->
+
+<!--Php ka real work yha se chlra-->
+<?php
+include('dbcon.php');
+
+$SN =  $_SESSION['SN'];
+
+    $qry=" SELECT * FROM `pubgsolo` WHERE SN = '$SN'";
+    $run = mysqli_query($con,$qry);
+    if($run == True)
+     {   $count=0;
+        while($data = mysqli_fetch_assoc($run))
+        { $count++;
+        ?>
+           <!--    <tr align="center">
+                   -->
+                   <!--                
+                    <td><?php# echo $data['Id'];?></td>
+                    <td><?php# echo $data['SN'];?></td>
+                    <td><?php# echo $data['Player_Name'];?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo $data['Game'];?></td>
+                    <td><?php# echo $data['Gameid'];?></td>
+                    <td><?php# echo $data['Gameid'];?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo $data['Transection'];?></td>
+                    <td><?php# echo $data['DATE'];?></td>
+                    <td><?php# echo $data['total kill'];?></td>
+                    <td><?php# echo $data['Winning'];?></td>
+                    <td><?php# echo $data['Rank'];?></td>
+                     <td><?php# echo $data['Slot'];?></td>
+                     <td><?php# echo "Solo";?></td>
+                   </forms>
+               </tr>-->
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="  margin-bottom: 20px;background-image: url('img/PUBG%20MOBILE.jpg');"   >
+      <div class="box-content">
+
+
+        <h2> PUBG MOBILE</h2><hr style ="    margin-bottom: 10px;">
+
+        <p>ENTRY -
+         20rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Solo";?>  
+        </p>
+
+    <p>Player name -
+    <?php echo $data['Player_Name'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+
+                 
+        <?php
+        }
+   }
+
+      $qry1="SELECT * FROM `pubgduo` WHERE   SN = '$SN' ";
+      $run1=mysqli_query($con,$qry1);
+      if($run1==True)
+       {   $count=0;
+        while($data1 = mysqli_fetch_assoc($run1))
+        { $count++;
+        ?>  <!--
+               <tr align="center">
+                                  
+                    <td><?php# echo $data['ID'];?></td>
+                    <td><?php# echo $data['SN'];?></td>
+                    <td><?php# echo $data['Team_leader'];?></td>
+                    <td><?php# echo $data['Game'];?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo $data['p1id'];?></td>
+                    <td><?php# echo $data['p2id'];?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo $data['Transection'];?></td>
+                    <td><?php# echo $data['DATE'];?></td>
+                    <td><?php# echo $data['total kill'];?></td>
+                    <td><?php# echo $data['Winning'];?></td>
+                    <td><?php# echo $data['Rank'];?></td>
+                    <td><?php# echo $data['Slot'];?></td>  
+                    <td><?php# echo "Duo";?></td> 
+               </tr> -->
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+ 
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="margin-bottom: 20px;background-image: url('img/PUBG MOBILE.jpg');"   >
+      <div class="box-content">
+
+        <h2>PUBG MOBILE </h2><hr style ="    margin-bottom: 10px;">
+
+        <p>ENTRY -
+         40rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data1['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data1['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Duo";?>  
+        </p>
+
+    <p>Team name -
+    <?php echo $data1['Team_leader'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+        <?php
+        }
+         
+     }
+    
+        $qry2 = "SELECT * FROM `pubgsquad` WHERE SN = '$SN' ";
+        $run2=mysqli_query($con,$qry2);
+        if($run2==True)
+         {   $count=0;
+        while($data2 = mysqli_fetch_assoc($run2))
+        { $count++;
+        ?><!--
+               <tr align="center">
+                                  
+                    <td><?php# echo $data['Id'];?></td>
+                    <td><?php# echo $data['SN'];?></td>
+                    <td><?php# echo $data['Team_leader'];?></td>
+                    <td><?php# echo $data['Team_name'];?></td>
+                    <td><?php# echo $data['Game'];?></td>
+                    <td><?php# echo "---";?></td>
+                    <td><?php# echo $data['p1id'];?></td>
+                    <td><?php# echo $data['p2id'];?></td>
+                    <td><?php# echo $data['p3id'];?></td>
+                    <td><?php# echo $data['p4id']?></td>
+                    <td><?php# echo $data['Transection'];?></td>
+                    <td><?php# echo $data['DATE'];?></td>
+                    <td><?php# echo $data['total kill'];?></td>
+                    <td><?php# echo $data['Winning'];?></td>
+                    <td><?php# echo $data['Rank'];?></td>
+                    <td><?php# echo $data['Slot'];?></td>
+                    <td><?php# echo "Squad";?></td>
+                    
+               </tr>
+        --><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+ 
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="  margin-bottom: 20px;background-image: url('img/PUBG MOBILE.jpg');"   >
+      <div class="box-content">
+
+        <h2> PUBG MOBILE</h2><hr style ="    margin-bottom: 10px;">
+
+        <p>ENTRY -
+         80rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data2['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data2['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Squad";?>  
+        </p>
+
+    <p>Team name -
+    <?php echo $data2['Team_name'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+        <?php
+        }
+         
+     
+      
+      }
+
+  
+/*
+  #free fire will start here
+  */
+       $qry3="SELECT * FROM `ffsolo` WHERE  SN = '$SN' ";
+       $run3=mysqli_query($con,$qry3);
+       if($run3==True)
+        {   $count=0;
+        while($data3 = mysqli_fetch_assoc($run3))
+        { $count++;
+        ?>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+ 
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="  margin-bottom: 20px;background-image: url('img/ffa.jpg');"   >
+      <div class="box-content">
+
+        <h2>Free-Fire </h2><hr style =" margin-bottom: 10px;">
+
+        <p>ENTRY -
+         20rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data3['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data3['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Solo";?>  
+        </p>
+
+    <p>Player name -
+    <?php echo $data3['Player_Name'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+                 
+        <?php
+        }
+     
+  }
+
+         $qry4="SELECT * FROM `ffduo` WHERE   SN = '$SN' ";
+         $run4=mysqli_query($con,$qry4);
+         if($run4==True)
+          { $count++;
+            while($data4 = mysqli_fetch_assoc($run4))
+        { $count++;
+            ?>
+                   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+ 
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="  margin-bottom: 20px;background-image: url('img/ffa.jpg');"   >
+      <div class="box-content">
+
+        <h2>Free-Fire  </h2><hr style ="    margin-bottom: 10px;">
+
+        <p>ENTRY -
+         40rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data4['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data4['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Duo";?>  
+        </p>
+
+    <p>Team name -
+    <?php echo $data4['Team_leader'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+            <?php
+        }  
+         }
+# ff squad start here
+
+           $qry5="SELECT * FROM `ffsquad` WHERE   SN = '$SN' ";
+         $run5=mysqli_query($con,$qry5);
+         if($run5==True)
+          { $count++;
+            while($data5 = mysqli_fetch_assoc($run5))
+        { $count++;
+            ?>
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/mymatches.css" rel="stylesheet">
+  <title>tour</title>
+</head>
+<body>
+  
+ 
+<div class="mymatcontainer">
+    <div id="cards" class="boxes" style ="  margin-bottom: 20px;background-image: url('img/ffa.jpg');"   >
+      <div class="box-content">
+
+        <h2>Free-Fire </h2><hr style ="    margin-bottom: 10px;">
+
+        <p>ENTRY -
+         80rs
+        </p>
+
+    <p style="color:lawngreen;"><b>Joined on -
+    <?php echo $data5['DATE'];?>
+          </b>
+        </p>
+
+    <p>Slot -
+    <?php echo $data5['Slot'];?> 
+        </p>
+
+    <p style="color:yellow;">Map -
+    <?php echo "Erangel";?>
+          <b></b>
+        </p>
+
+    <p>Type  -
+    <?php echo "Squad";?>  
+        </p>
+
+    <p>Team name -
+    <?php echo $data5['Team_name'];?>   
+        </p>
+
+ <p style="color:lawngreen;"><b>Status -
+        Joined</b>
+        </p>
+
+        <a class="showmore" href="#"></a>
+      </div>
+    </div><br><br></div>
+</body>
+</html>
+
+        <?php
+        }
+         
+     }
+     
+}
+
+
+
+?>
+  
+ 
+ 
+
+  <!-- FOOTER -->
+    
+ 

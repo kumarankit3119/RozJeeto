@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rozjeeto</title>
+   <!-- Latest compiled and minified CSS -->
+
+    <style type="text/css">
+    text{
+        color: white;
+        font-family:Helvetica, Arial, sans-serif;
+        font-size:33px;
+        pointer-events:none;
+        
+    }
+    #chart{
+      
+   
+
+        position:absolute;
+        width:500px;
+        height:500px;
+      top: 20%;
+    left: 25%;
+        }
+    #question{
+        position: absolute;
+        width:400px;
+        height:300px;
+        top:0;
+        left:520px;
+    }
+    #question h1{
+        color: blue;
+        font-size: 60px;
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top:125%;
+        -webkit-transform:translate(0,-50%);
+                transform:translate(0,-50%);
+    }
+         
+    @media screen and (min-width: 600px) {
+  
+           #chart{
+      
+        zoom: 160%;
+position:absolute;
+        width:500px;
+        height:500px;
+      top: 25%;
+    left: 10%;
+        }
+}
+   
+    </style>
+    
+    <script type="text/javascript">
+	function preback(){window.history.forward();}
+	setTimeout("preback()",0);
+	window.onunload=function(){null};
+  
+        //check for Navigation Timing API support
+          if (window.performance) {
+              console.info("window.performance works fine on this browser");
+          }
+          console.info(performance.navigation.type);
+          if (performance.navigation.type == performance.navigation.TYPE_RELOAD || performance.navigation.type ==performance.navigation.TYPE_BACK_FORWARD) {
+              console.info( "This page is reloaded" );
+              mostrecentscore=0;
+               window.open("spin_thankyou.html","_parent");
+          } else {
+              console.info( "This page is not reloaded");
+            }  
+        
+  </script>
+    
+</head>
+<body style="background: 	#C0C0C0;">
+ 
+  
+ 
+       <h1 style="text-align: center;font-size: 4.3rem;margin: 14px;">You Got a Spin For completing your survey. Spin & Reveal your reward </h1> 
+   <hr>
+ 
+       <h1 style="font-size: 3.3rem;margin: 14px;margin-left: 10px;" id="Spinsleft">Total Spins: 1 </h1> 
+
+
+    <div id="chart"></div>
+    <div id="question"><h1></h1></div>
+    
+    
+    <div class="card-body" id="participat" style="margin: 10px;margin-top:100%;font-size: 3rem;">
+                 <h5>Congratulations,You got <span style="color: blue;" ><b id="prize">0 </b></span>&nbsp;in Instant Cash For Completing tasks  </h5>
+                  
+                   
+                   <span style="color: darkred;margin-top: 30px;"><b>click below to withdrawal in paytm</b> </span>
+                   <div style="margin-top: 10px;">
+                  
+                   <div class="form-floating" style="margin-bottom: 10px;display: flex;">
+              
+             
+                       <button type="button" style="width: 100%;color: aliceblue;background: green;font-size: 2.5rem;padding: 15px;border-radius: 10px;height: 90px;" onclick="withdrawal()" >Withdraw now</button>
+            </div></div> 
+              </div>
+     <script> 
+         let prize=0;
+         
+        document.getElementById('participat').style.display='none';
+         function showprize(){
+            window.scrollTo(0,1000);
+              document.getElementById('participat').style.display='block';
+         }
+        function withdrawal(){
+            window.open("spin_thankyou.html","_parent");
+        }
+    </script>
+    
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        var totalspins=1;
+        var padding = {top:20, right:40, bottom:0, left:0},
+            w = 500 - padding.left - padding.right,
+            h = 500 - padding.top  - padding.bottom,
+            r = Math.min(w, h)/2,
+            rotation = 0,
+            oldrotation = 0,
+            picked = 100000,
+            oldpick = [],
+            color = d3.scale.category20();//category20c()
+            //randomNumbers = getRandomNumbers();
+
+        //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
+
+        var data = [
+                    {"label":"2 Rs",  "value":1,  "question":"Congrats ,You won 2rs"}, // padding
+                    {"label":"3 Rs",  "value":1,  "question":"Congrats ,You won 3rs"}, //font-family
+                    {"label":"6 Rs",  "value":1,  "question":"Congrats ,You won 6rs"}, //color
+                    {"label":"4 Rs",  "value":1,  "question":"Congrats ,You won 4rs"}, //font-weight
+                    {"label":"5 Rs",  "value":1,  "question":"Congrats ,You won 5rs"}, //font-size
+                    {"label":"9 Rs",  "value":1,  "question":"Congrats ,You won 9rs"}, //background-color
+                    {"label":"7 Rs",  "value":1,  "question":"Congrats ,You won 7rs"}, //nesting
+                    {"label":"8 Rs",  "value":1,  "question":"Congrats ,You won 8rs"}, //bottom
+                    {"label":"10 Rs",  "value":1, "question":"Congrats ,You won 10rs"} //bottom
+                 //comma
+                 //comma
+        ];
+
+
+        var svg = d3.select('#chart')
+            .append("svg")
+            .data([data])
+            .attr("width",  w + padding.left + padding.right)
+            .attr("height", h + padding.top + padding.bottom);
+
+        var container = svg.append("g")
+            .attr("class", "chartholder")
+            .attr("transform", "translate(" + (w/2 + padding.left) + "," + (h/2 + padding.top) + ")");
+
+        var vis = container
+            .append("g");
+            
+        var pie = d3.layout.pie().sort(null).value(function(d){return 1;});
+
+        // declare an arc generator function
+        var arc = d3.svg.arc().outerRadius(r);
+
+        // select paths, use arc generator to draw
+        var arcs = vis.selectAll("g.slice")
+            .data(pie)
+            .enter()
+            .append("g")
+            .attr("class", "slice");
+            
+
+        arcs.append("path")
+            .attr("fill", function(d, i){ return color(i); })
+            .attr("d", function (d) { return arc(d); });
+
+        // add the text
+        arcs.append("text").attr("transform", function(d){
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                d.angle = (d.startAngle + d.endAngle)/2;
+                return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius -10) +")";
+            })
+            .attr("text-anchor", "end")
+            .text( function(d, i) {
+                return data[i].label;
+            });
+        if(totalspins>0){
+            container.on("click", spin);
+            
+        }
+        
+
+
+        function spin(d){
+            totalspins--;
+            container.on("click", null);
+
+            //all slices have been seen, all done
+            console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
+            if(oldpick.length == data.length){
+                console.log("done");
+                container.on("click", null);
+                return;
+            }
+
+            var  ps       = 360/data.length,
+                 pieslice = Math.round(1440/data.length),
+                 rng      = Math.floor((Math.random() * 1440) + 360);
+            
+       //Add php here
+         document.getElementById("Spinsleft").innerHTML="Total Spin - 0";
+            
+                  var counter=1;
+              if(counter==25 || counter==50 || counter==1 || counter==75 || counter==100){
+         rotation = (Math.round(rng / ps) * ps);
+                  
+                 }
+            else{
+                
+                     rotation =(1440);
+                 }
+            
+            
+            picked = Math.round(data.length - (rotation % 360)/ps);
+            picked = picked >= data.length ? (picked % data.length) : picked;
+
+
+            if(oldpick.indexOf(picked) !== -1){
+                d3.select(this).call(spin);
+                return;
+            } else {
+                oldpick.push(picked);
+            }
+
+            rotation += 90 - Math.round(ps/2);
+
+            vis.transition()
+                .duration(3000)
+                .attrTween("transform", rotTween)
+                .each("end", function(){
+
+                    //mark question as seen
+                    d3.select(".slice:nth-child(" + (picked + 1) + ") path")
+                        .attr("fill", "lawngreen");
+
+                    //populate question
+                    d3.select("#question h1")
+                        .text(data[picked].question);
+                
+                //store into data database
+                showprize();
+                    console.log(data[picked]);
+                prize=(data[picked].label);
+                console.log(prize);
+                document.getElementById('prize').innerHTML=prize;
+                    oldrotation = rotation;
+                if(totalspins>0){
+                    container.on("click", spin);}
+                });
+        }
+
+        //make arrow
+        svg.append("g")
+            .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h/2)+padding.top) + ")")
+            .append("path")
+            .attr("d", "M-" + (r*.15) + ",0L0," + (r*.05) + "L0,-" + (r*.05) + "Z")
+            .style({"fill":"black"});
+
+        //draw spin circle
+        container.append("circle")
+            .attr("cx", 0)
+            .attr("cy", 0)
+            .attr("r", 60)
+            .style({"fill":"white","cursor":"pointer"});
+
+        //spin text
+        container.append("text")
+            .attr("x", 0)
+            .attr("y", 15)
+            .attr("text-anchor", "middle")
+            .text("SPIN")
+            .style({"font-weight":"bold", "font-size":"30px"});
+        
+        
+        function rotTween(to) {
+          var i = d3.interpolate(oldrotation % 360, rotation);
+          return function(t) {
+            return "rotate(" + i(t) + ")";
+          };
+        }
+        
+        
+        function getRandomNumbers(){
+            var array = new Uint16Array(1000);
+            var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
+
+            if(window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function"){
+                window.crypto.getRandomValues(array);
+                console.log("works");
+            } else {
+                //no support for crypto, get crappy random numbers
+                for(var i=0; i < 1000; i++){
+                    array[i] = Math.floor(Math.random() * 100000) + 1;
+                }
+            }
+
+            return array;
+        }
+
+    </script>
+    
+   
+</body>
+</html>

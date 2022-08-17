@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+      
+      
+      <!-- Custom styles for this template -->
+   <link rel="stylesheet" href="css/notifications.css">
+      <link href="css/headers.css" rel="stylesheet">
+     <link href="css/game-details.css" rel="stylesheet" >
+       <link href="css/carousel.css" rel="stylesheet">
+      
+  </head>
+  <body style="background: 	#222;color: #e6e6e6;" >
+  
+  
+   
+       <div class="container" style="margin-top: 10px;">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
+        
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+           
+          <li><a href="#" class="nav-link px-2 link-secondary" style="color: #e6e6e6;">Tournaments</a></li>
+         
+          <li><a href="leaderboard.php" class="nav-link px-2 " style="color: #e6e6e6;">Leaderboard </a></li>
+      <li><a href="webchat.php" class="nav-link px-2 link-dark"><span class="badge rounded-pill bg-info text-dark">Chat</span> </a></li>
+        </ul>
+        
+          <a href="#" class="d-block link-dark text-decoration-none icon" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-block;color: #e6e6e6;margin-right: 20px;margin-top: 2px;">
+             
+            <img src="img/bell.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              
+           <span id="notifications">&nbsp;1&nbsp;</span> 
+          </a>
+          
+          <script>
+              
+           
+    var notifications=1;
+              
+             
+           
+              if(notifications<1){
+        document.getElementById("notifications").style.display="none";
+    }
+            if(notifications>9)
+                {
+                     document.getElementById("notifications").innerHTML="9+";
+                }
+              else{
+                  document.getElementById("notifications").innerHTML="&nbsp;"+notifications+"&nbsp;";
+              }
+
+             
+   
+</script>
+          
+          <div class="dropdown text-end" style="float:right;">
+              
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-block;color: #e6e6e6;">
+              <p style="float: left; margin: 3px;">Aditya</p>
+            <img src="img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">  
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" >
+            <li><a class="dropdown-item" href="wallet.php">Wallet</a></li>
+            
+            <li><a class="dropdown-item" href="Profile.php">Profile</a></li>
+              <li><a class="dropdown-item" href="mymatches.php">My matches </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+
+       
+      </div>
+    </div>
+    
+<header >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background: #101112;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="userindex.php">  <img src="img/" width="32" height="32" style="margin-right: 4px;">Rozjeeto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="userindex.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.php">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">contact us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+ <hr >
+    
+      <!-- jssr slider  -->
+ <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:500,d:1000,x:0,e:{x:6}}],
+              [{b:-1,d:1,x:100,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,x:200,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,rX:20,rY:90},{b:0,d:4000,rX:0,e:{rX:1}}],
+              [{b:-1,d:1,rY:-20},{b:0,d:4000,rY:-90,e:{rY:7}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:3000,sX:1,sY:1,e:{sX:1,sY:1}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:5000,sX:1,sY:1,e:{sX:3,sY:3}}],
+              [{b:-1,d:1,tZ:300},{b:0,d:2000,o:1},{b:3500,d:3500,tZ:0,e:{tZ:1}}],
+              [{b:-1,d:1,x:20,p:{x:{o:33,r:0.5}}},{b:0,d:1000,x:0,o:0.5,e:{x:3,o:1},p:{x:{dl:0.05,o:33},o:{dl:0.02,o:68,rd:2}}},{b:1000,d:1000,o:1,e:{o:1},p:{o:{dl:0.05,o:68,rd:2}}}],
+              [{b:-1,d:1,da:[0,700]},{b:0,d:600,da:[700,700],e:{da:1}}],
+              [{b:600,d:1000,o:0.4}],
+              [{b:-1,d:1,da:[0,400]},{b:200,d:600,da:[400,400],e:{da:1}}],
+              [{b:800,d:1000,o:0.4}],
+              [{b:-1,d:1,sX:1.1,sY:1.1},{b:0,d:1600,o:1},{b:1600,d:5000,sX:0.9,sY:0.9,e:{sX:1,sY:1}}],
+              [{b:0,d:1000,o:1,p:{o:{o:4}}}],
+              [{b:1000,d:1000,o:1,p:{o:{o:4}}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin-ext,cyrillic-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-004-double-tail-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 031 css*/
+        .jssorb031 {position:absolute;}
+        .jssorb031 .i {position:absolute;cursor:pointer;}
+        .jssorb031 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.8;}
+        .jssorb031 .i:hover .b {fill:#fff;fill-opacity:1;stroke:#000;stroke-opacity:1;}
+        .jssorb031 .iav .b {fill:#fff;stroke:#000;stroke-width:1600;fill-opacity:.6;}
+        .jssorb031 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;border-radius: 10px;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="slider/1.jpg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+            <div style="background-color:#000000;">
+                <img data-u="image"  src="slider/1.jpg" />
+                <div data-ts="flat" data-p="320" style="left:144px;top:80px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:550px;top:0px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:20px;top:18px;width:200px;height:20px;position:absolute;color:#edf1f2;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:0.1em;"></div>
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-arr="2" style="left:19px;top:36px;width:600px;height:30px;position:absolute;color:#edf1f2;font-size:24px;line-height:1.2;letter-spacing:0.05em;"><span style="font-weight:900;color:#e04338;"></span> </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="slider/02.jpg"/>
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                            <div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                    <div data-to="50% 50%" data-t="7" style="left:-50px;top:175px;width:600px;height:38px;position:absolute;opacity:0;color:#00a186;font-size:32px;font-weight:700;line-height:1.2;text-align:center;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="slider/2.jpg" />
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-arr="8" style="left:-2px;top:20px;width:1000px;height:20px;position:absolute;opacity:0;color:#0ff2f2;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.2;letter-spacing:1.3em;text-align:center;"></div>
+                </div>
+            </div>
+            <div style="background-color:#000000;">
+                <img data-u="image" style="opacity:0.9;" src="slider/3.jpg" />
+                <div data-ts="flat" data-p="1800" data-po="50% -100%" style="left:120px;top:90px;width:600px;height:300px;position:absolute;">
+                    <svg viewbox="0 0 200 200" width="200" height="200" data-t="10" style="left:66px;top:21px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                        <path stroke-dasharray="0,700" fill="none" stroke="#ffffff" d="M0,100C0,44.77152 44.77152,0 100,0C155.22848,0 200,44.77152 200,100C200,155.22848 155.22848,200 100,200C44.77152,200 0,155.22848 0,100Z" data-t="9"></path>
+                    </svg>
+                    <svg viewbox="0 0 80 80" width="80" height="80" data-t="12" style="left:3px;top:124px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                        <path stroke-dasharray="0,400" fill="none" stroke="#ffffff" shape-rendering="crispEdges" d="M80,80L0,80L0,0L80,0Z" data-t="11"></path>
+                    </svg>
+                    <svg viewbox="0 0 500 200" data-to="50% 50%" width="500" height="200" data-t="13" style="left:50px;top:50px;display:block;position:absolute;opacity:0;overflow:visible;">
+                        <g>
+                            <text fill="#ffffff" x="17" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:32px;font-weight:500;overflow:visible;">Join us
+                            </text>
+                            <text fill="#ffffff" x="188" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">Today
+                            </text>
+                            <text fill="#ffffff" x="218" y="170" style="position:absolute;font-family:Montserrat,sans-serif;font-size:16px;font-weight:900;letter-spacing:0.1em;overflow:visible;">and
+                            </text>
+                            <text fill="#ffffff" x="333" y="170" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif;font-size:16px;font-weight:900;letter-spacing:0.1em;overflow:visible;">win exciting prizes
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="slider/4.jpg" />
+                <div data-ts="flat" data-p="500" style="left:160px;top:-30px;width:800px;height:200px;position:absolute;">
+                    <div data-arr="14" style="left:0px;top:36px;width:800px;height:70px;position:absolute;opacity:0;color:#199494;font-family:'Roboto Condensed',sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.05em;text-align:center;text-shadow:2px 1px #d9d99a;">&nbsp;&nbsp;<span style="font-size:2em;"></span><span style="font-size:1.6em;"></span></div>
+                    <div data-arr="15" style="left:0px;top:106px;width:800px;height:48px;position:absolute;opacity:0;color:#0d4d4d;font-family:'Roboto Condensed',sans-serif;font-size:20px;font-weight:400;line-height:1.2;letter-spacing:0.2em;text-align:center;text-shadow:1px 1px #d9d99a;"> <span style="font-size:2em;"></span> </div>
+                </div>
+            </div>
+           
+             
+            
+            
+           
+            
+        </div><a data-scale="0" href="#" style="display:none;position:absolute;"></a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:13px;height:13px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+     
+<main>
+
+             <section class="tournaments" style="background:#222;">
+            <div class="container">
+                <div class="heading-filter-section">
+                    <h2 class="heading section-heading" style="color: white;"><span class="count-tournaments" style="color: white;">&nbsp;</span> Tournaments</h2>
+                    <span class="filter-icon"><img src="https://cdn.game.tv/create_tournament/filter.png" /></span>
+                    <div class="filters">
+                    
+                        <div class="pc- desktop-only">
+                            <div class="country-specific-filters filter-item">
+                                <button class="country-specific-btn select-btn" data-geo="all" style="color: white;background: #101112;"><span class="selected-flag country-f-flag" style="background-image:url(https://cdn.game.tv/locales/MAP.png);"></span>All  Regions</button>
+                                <ul class="country-list filter-list scrollbar">
+                                    <li class="country-item" data-geo="all"><span class="country-f-flag" style="background-image:url(https://cdn.game.tv/locales/MAP.png);"></span>All Regions</li>
+                                   
+                                    <li class="country-item" data-geo="in"><span class="country-f-flag" style="background-image:url(https://cdn.game.tv/locales/IN.png);"></span>India</li>
+                                     <li class="country-item" data-geo="all"><span class="country-f-flag" style="background-image:url(https://cdn.game.tv/locales/MAP.png);"></span>pakistan</li>
+                                </ul>
+                            </div>
+                            <div class="tournament-type-filter filter-item">
+                                <button class="tournament-specific-btn select-btn" data-status="all" style="color: white;background: #101112;">All Tournaments</button>
+                                <ul class="tournament-filter-list filter-list scrollbar">
+                                    <li class="tourn-f-item" data-status="all">All Tournaments</li>
+                                    <li class="tourn-f-item" data-status="live">live</li>
+                                    <li class="tourn-f-item" data-status="upcoming">upcoming</li>
+                                    <li class="tourn-f-item" data-status="completed">completed</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div><hr>
+                <h4  style="color: white;"><span  style="color: white;">&nbsp;</span>&nbsp; &nbsp;PUBG Mobile </h4>
+                <div class="tournaments-list-details">
+                   
+                    <ul class="tournaments-list" style="padding-left: 0.1rem;">
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose tournament_pubg_solo.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_2/default/game_icons/676560b6897f7b09be8fd26c3d02b83e/en/676560b6897f7b09be8fd26c3d02b83e.png" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                   <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                 </g>
+                               </div>
+                                    </div>
+                                    <span class="game-name">PUBG MOBILE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose tournament_pubg_solo.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_3/676560b6897f7b09be8fd26c3d02b83e/676560b6897f7b09be8fd26c3d02b83e/01.jpg" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                            <svg class="svg-icon" width="48" height="48" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                    </g>
+                                </svg>
+                                        </div> <img src="https://cdn.game.tv/game-tv-content/images_2/default/game_logo/en/676560b6897f7b09be8fd26c3d02b83e.png" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_pubg_solo.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon"></span>
+                                        <p class="discord-title">app</p>
+                                      
+                                       <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px;"><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>Solo</b></p>
+                                         
+                                    </div>
+                                    <h3 class="game-title">PUBG Mobile Season X1</h3>
+                                    <div class="joining-info" data-date=2 021-07-06T06:00:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">6 Jul 2021</p>
+                                            <p class="join-time">12:00 AM<span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                             
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose%20tournament_pubg_squad.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_2/default/game_icons/676560b6897f7b09be8fd26c3d02b83e/en/676560b6897f7b09be8fd26c3d02b83e.png" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                           
+                                 <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             
+                                  
+                             
+                                   .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             
+                                   @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                  
+                                 </g>
+                            
+                                        </div>
+                                    </div>
+                                    <span class="game-name">PUBG MOBILE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose%20tournament_pubg_squad.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_3/676560b6897f7b09be8fd26c3d02b83e/676560b6897f7b09be8fd26c3d02b83e/02.jpg" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                           
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              
+                                    .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              
+                                    .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                    
+                                  </g>
+                               
+                                        </div> <img src="https://cdn.game.tv/game-tv-content/images_2/default/game_logo/en/676560b6897f7b09be8fd26c3d02b83e.png" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_pubg_squad.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon"></span>
+                                        <p class="discord-title">app</p>
+                                       
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px; "><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>Squad</b></p>
+                                    </div>
+                                    <h3 class="game-title">PUBG MOBILE</h3>
+                                    <div class="joining-info" data-date=2 021-07-03T11:46:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">3 Jul 2021</p>
+                                            <p class="join-time">12:00 AM <span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose%20tournament_pubg_duo.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_2/default/game_icons/676560b6897f7b09be8fd26c3d02b83e/en/676560b6897f7b09be8fd26c3d02b83e.png" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                            <svg class="svg-icon" width="48" height="48" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             
+                                   
+                             
+                                   .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             
+                                   @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                  
+                                 </g>
+                               </svg>
+                                        </div>
+                                    </div>
+                                    <span class="game-name">PUBG MOBILE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose%20tournament_pubg_duo.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://cdn.game.tv/game-tv-content/images_3/676560b6897f7b09be8fd26c3d02b83e/676560b6897f7b09be8fd26c3d02b83e/03.jpg" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                           
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              
+                                    .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              
+                                    .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                 
+                                  </g>
+                         
+                                        </div> <img src="https://cdn.game.tv/game-tv-content/images_2/default/game_logo/en/676560b6897f7b09be8fd26c3d02b83e.png" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_pubg_duo.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon "></span>
+                                        <p class="discord-title">app</p>
+                                        
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px; "><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>DUO</b></p>
+                                        
+                                    </div>
+                                    <h3 class="game-title">PUBG Mobile. Season A1</h3>
+                                    <div class="joining-info" data-date=2 021-07-02T12:00:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">2 Jul 2021</p>
+                                            <p class="join-time">12:00 AM<span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                      
+                       
+                        </ul>
+
+                    <hr>
+                <h4  style="color: white;"><span  style="color: white;">&nbsp;</span>&nbsp; &nbsp;FREE-FIRE </h4>
+                    <ul class="tournaments-list" style="padding-left: 0.1rem;">
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose%20tournament_FreeFire_solo.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://i.pinimg.com/736x/c3/b1/2a/c3b12a02bd1d1c60d5aed3a033b5efd0.jpg" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                   <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                 </g>
+                               </div>
+                                    </div>
+                                    <span class="game-name">FREE-FIRE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose%20tournament_FreeFire_solo.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://st1.bgr.in/wp-content/uploads/2021/02/Free-Fire.jpg" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                            <svg class="svg-icon" width="48" height="48" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                    </g>
+                                </svg>
+                                        </div> <img src="https://i.pinimg.com/originals/b0/5d/03/b05d03a8e7b7b4e4e46159f0fc74ab60.jpg" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_FreeFire_solo.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon"></span>
+                                        <p class="discord-title">app</p>
+                                      
+                                       <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px;"><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>Solo</b></p>
+                                         
+                                    </div>
+                                    <h3 class="game-title">FREE-FIRE Season X1</h3>
+                                    <div class="joining-info" data-date=2 021-07-06T06:00:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">6 Jul 2021</p>
+                                            <p class="join-time">12:00 AM<span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                             
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose%20tournament_FreeFire_squad.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://i.pinimg.com/736x/c3/b1/2a/c3b12a02bd1d1c60d5aed3a033b5efd0.jpg" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                           
+                                 <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             
+                                  
+                             
+                                   .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             
+                                   @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                  
+                                 </g>
+                            
+                                        </div>
+                                    </div>
+                                    <span class="game-name">FREE-FIRE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose%20tournament_FreeFire_squad.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2021/04/21/2584226-755536616.jpg?itok=MHAatcMt" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                           
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              
+                                    .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              
+                                    .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                    
+                                  </g>
+                               
+                                        </div> <img src="https://i.pinimg.com/originals/b0/5d/03/b05d03a8e7b7b4e4e46159f0fc74ab60.jpg" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_FreeFire_squad.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon"></span>
+                                        <p class="discord-title">app</p>
+                                       
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px; "><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>Squad</b></p>
+                                    </div>
+                                    <h3 class="game-title">FREE-FIRE</h3>
+                                    <div class="joining-info" data-date=2 021-07-03T11:46:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">3 Jul 2021</p>
+                                            <p class="join-time">12:00 AM <span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tournament-item hvr-float-shadow">
+                            <div class="game-wrapper">
+                                <a href="choose%20tournament_FreeFire_duo.php" class="game-info ">
+                                    <div class="game-icon">
+                                        <img data-src="https://i.pinimg.com/736x/c3/b1/2a/c3b12a02bd1d1c60d5aed3a033b5efd0.jpg" class="img-responsive lazy" alt="PUBG MOBILE">
+                                        <div class="img-loading">
+                                            <svg class="svg-icon" width="48" height="48" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <style type="text/css">
+                                   .img-loading svg {
+                                     margin: 0 auto;
+                                   }
+                             
+                                   
+                             
+                                   .img-loading circle {
+                                     stroke: #426bff;
+                                     stroke-width: 3px;
+                                     stroke-dasharray: 90;
+                                     r: 46%;
+                                     cx: 50%;
+                                     cy: 50%;
+                                     animation: rotate 2s ease infinite;
+                                     transform-origin: 50%;
+                                   }
+                             
+                                   @keyframes rotate {
+                                     0% {
+                                       transform: rotate(0deg);
+                                     }
+                             
+                                     100% {
+                                       transform: rotate(360deg);
+                                     }
+                                   }
+                                 </style>
+                                 <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                   <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                  
+                                 </g>
+                               </svg>
+                                        </div>
+                                    </div>
+                                    <span class="game-name">FREE-FIRE</span>
+                                </a>
+                                <div class="country-flag">
+                                    <img class="country-icon" src="https://cdn.game.tv/locales/IN.png">
+                                    <p class="country-name">IN</p>
+                                </div>
+                            </div>
+                            <div class="game-banner-wrapper">
+                                <a href="choose%20tournament_FreeFire_duo.php" class="game-banner btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <figure class="tournament-image  banner-wrapper">
+                                        <img data-src="https://sensortower-itunes.s3.amazonaws.com/blog/2021/04/gerena-free-fire-top-grossing-mobile-battle-royale-game.jpg" class="img-responsive banner-image lazy" alt="PUBG MOBILE" />
+                                        <div class="img-loading">
+                                           
+                                  <style type="text/css">
+                                    .img-loading svg {
+                                      margin: 0 auto;
+                                    }
+                              
+                                    .img-loading path {
+                                      fill: #426bff;
+                                    }
+                              
+                                    .img-loading circle {
+                                      stroke: #426bff;
+                                      stroke-width: 3px;
+                                      stroke-dasharray: 90;
+                                      r: 46%;
+                                      cx: 50%;
+                                      cy: 50%;
+                                      animation: rotate 2s ease infinite;
+                                      transform-origin: 50%;
+                                    }
+                              
+                                    @keyframes rotate {
+                                      0% {
+                                        transform: rotate(0deg);
+                                      }
+                              
+                                      100% {
+                                        transform: rotate(360deg);
+                                      }
+                                    }
+                                  </style>
+                                  <g id="logo/tourney-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" cx="21.5" cy="21.5" r="21.5"></circle>
+                                 
+                                  </g>
+                         
+                                        </div> <img src="https://i.pinimg.com/originals/b0/5d/03/b05d03a8e7b7b4e4e46159f0fc74ab60.jpg" class="icon-image" alt="PUBG MOBILE">
+                                    </figure>
+                                    <div class="bg-gradient"></div>
+                                </a>
+                            </div>
+                            <div class="tournament-details">
+                                <a href="choose%20tournament_FreeFire_duo.php" class="btn-track-join-now" data-eventname="join_tournament_clicked" data-gameid="-pubg-mobile" data-gameName="PUBG MOBILE">
+                                    <div class="platform-details">
+                                        <p class="platform">PLATFORM</p>
+                                        <span class="platform-icon "></span>
+                                        <p class="discord-title">app</p>
+                                        
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color: aqua;margin-top: 9px; "><b><i class="fas fa-map-marker-alt" style="color: orange;"></i>&nbsp;Erangel</b></p>
+                                         <p style ="background: grey;margin-left: 20px;border-radius: 10px;padding: 5px;font-size: 10px;color:antiquewhite;margin-top: 9px; "><b>DUO</b></p>
+                                        
+                                    </div>
+                                    <h3 class="game-title">FREE-FIRE Season A1</h3>
+                                    <div class="joining-info" data-date=2 021-07-02T12:00:00+00:00>
+                                        <div class="joining-info-content">
+                                            <p class="join-date">2 Jul 2021</p>
+                                            <p class="join-time">12:00 AM<span class="add-timezoneAbbr">&nbsp;| onwards</span></p>
+                                        </div>
+                                        <span class="join-now">JOIN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                      
+                       
+                        </ul>
+                  <!--  <div class="loader hide"><img src="img/1495.gif" class="img-responsive" alt="loading.."></div>
+                    <a href="#" class="view-more show">
+                  <button class="view" style="color: white;background: #101112;">View more</button>
+                </a>
+                    -->
+                    
+                </div>
+            </div>
+        </section>
+
+    
+   <div class="container marketing">
+   
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+       
+       <div class="alert alert-success alert-dismissible fade show" role="alert">
+          
+          <h3 style="text-align: center;"  >Must try Games </h3>
+        </div>
+     
+       <br>
+     
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4" >
+        <img src="img/chess.jpg" class="bd-placeholder-img " width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 10px;"><title></title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+
+        <h2><b>Chess</b></h2>
+        <p>Chess is a recreational and competitive board game played between two players. </p>
+        <p><a class="btn btn-success disabled" href="choose%20tournament.html">Coming soon &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" >
+        <img src="img/ludo.png" class="bd-placeholder-img " width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 10px;"><title></title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2><b>Ludo</b></h2>
+        <p>Ludo is a strategy board game for two to four players </p>
+        <p><a class="btn btn-success disabled" href="choose%20tournament.html">Coming soon &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" >
+        <img src="img/snakes.jpg" class="bd-placeholder-img " width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 10px;"><title></title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+
+        <h2><b>Snakes&Ladders</b> </h2>
+        <p>Each player rolls the die; the highest roller begins the game.
+ </p>
+        <p><a class="btn btn-success disabled" href="choose%20tournament.html">Coming soon &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+       
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette Game. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Launching soon</p>
+      </div>
+      <div class="col-md-5" >
+        <img src="img/pirate.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="border-radius: 20px; "><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></svg>
+
+      </div>
+    </div>
+
+
+ 
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+</main>
+ 
+
+  <!-- FOOTER -->
+   
+<footr class="footr" >
+    <style>
+footr{
+    margin-top: 100px;
+    background: #101112;
+display: -webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+    font-family: serif;
+flex-flow: row wrap;
+padding: 50px;
+    color:#fff;}
+   
+.footr > *{
+flex: 1 100%;
+
+}
+.footr-left{
+margin-right: 1.25em;
+margin-bottom: 2em;}
+
+.footr-left img{
+width: 20%;
+    padding: 15px 0;
+}
+.footr-left p{
+margin: 10px;
+}
+h2{
+font-weight:600;
+font-size:17px;
+}
+.footr ul{
+list-style:none;
+padding-left:0;
+}
+.footr li{
+line-height: 2em;
+}
+.footr a{
+text-decoration:none;
+}
+.footr-right{
+display: -webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+flex-flow:row wrap;
+}
+.footr-right > * {
+flex : 1 50%;
+margin-right: 1.25em;
+}
+.box1 a{
+color: #999;
+}
+        .box1 a:hover{
+color: #fff;
+}
+.footr-bottom{
+text-align: center;
+color: white;
+padding-top: 50px;
+}
+.footr-bottom a{
+
+color: white;
+
+}
+        .footr-bottom i:hover{
+
+color: blueviolet;
+
+}
+.footr-left p{
+padding-right: 20%;
+color: #999;}
+
+ .socials a{
+     margin-top: 5px;
+     border-radius: 11px;
+background : #E8EBF1 ;
+width: 40px;
+height: 40px;
+display: inline-block;
+margin-right: 10px;
+}
+.socials a i{
+
+padding: 7px 8px;
+font-size: 25px;
+}
+
+@media screen  and (min-width: 600px){
+.footr-right > *{
+flex:1;}
+.footr-left{
+flex: 1 0px;
+}
+.footr-right{
+flex: 2 0px;
+}
+}
+
+@media(max width; 600px){
+.footr{
+padding: 15px;
+}
+main{
+font-size: 55px;
+}
+
+}</style>
+<div class="footr-left" >
+
+Follow us on Social Media. </p>
+<div class="socials" >
+<a href="https://twitter.com/Kktbros"><i class="fab fa-twitter " style="color:#1DA1F2;"></i></a>
+<a href="https://instagram.com/Kkt_bros"><i class="fab fa-instagram"style=" color:  #DD2A7B;"></i></a>
+    <a href="https://facebook.com/Kktbros"><i class="fab fa-facebook " style=" color:  #4267B2;"></i></a>
+   <a href="https://youtube.com/Kktbros"> <i class="fab fa-youtube"style=" color:  #FF0000;
+padding: 7px 6px;
+font-size: 25px;"></i></a>
+     <a href="https://youtube.com/Kktbros"> <i class="fab fa-linkedin"style=" color:  #0e76a8;"></i></a>
+</div>
+</div>
+<ul class="footr-right">
+
+
+    
+<li class="features">
+<h2>Useful links</h2>
+<ul class="box1">
+<li><a href="assets/privacy.php">Privacy Policy</a></li>
+<li><a href="assets/terms.php">Terms & Conditions</a></li>
+    <li><a href="assets/Aboutus.php">About us</a></li>
+    <li><a href="assets/Contactus.php">Contact us</a></li>
+</ul>
+</li>
+    
+    
+<li>
+<h2>HeadQuarter</h2>
+<ul class="box1">
+
+<li><a href="##">Phase1 ,Sec56</a></li>
+    <li><a href="##">Mohali,Chandigarh</a></li>
+    <li><a href="##">160055, India </a></li>
+</ul>
+</li>
+
+</ul> 
+
+<div class="footr-bottom">
+    
+    <p>All right reserved by &copy; <a href="#">Rozjeeto
+</a> 2021</p>
+    <p class="float-end"><a href="#"><i class="fas fa-caret-square-up fa-2x"></i></a></p>
+    </div>
+</footr>
+
+
+<script src="js/main.js"></script>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    </body> 
+  
+</html>

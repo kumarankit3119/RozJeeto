@@ -1,0 +1,330 @@
+<?php
+SESSION_START();
+include('dbcon.php');
+$aka=$_SESSION['uid'];
+$qry="SELECT * FROM `registration` WHERE Name  = '$aka' ";
+$run=mysqli_query($con,$qry);
+$data = mysqli_fetch_assoc($run)
+?>
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Rozjeeto </title>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='' rel='stylesheet'>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>
+                                    
+                                    body {
+    background: #ddd;
+    min-height: 100vh;
+    vertical-align: middle;
+    display: flex
+}
+
+.card {
+    margin: auto;
+    width: 600px;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+@media(max-width:767px) {
+    .card {
+        width: 90%;
+        padding: 1.5rem
+    }
+}
+
+@media(height:1366px) {
+    .card {
+        width: 90%;
+        padding: 8vh
+    }
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 2.5em
+}
+
+.nav {
+    display: flex
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: unset;
+    margin-bottom: 6vh
+}
+
+.nav li {
+    padding: 1rem
+}
+
+.nav li a {
+    color: black;
+    text-decoration: none
+}
+
+.active {
+    border-bottom: 2px solid black;
+    font-weight: bold
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    width: 100%;
+    min-width: unset;
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0
+}
+
+form a {
+    color: grey;
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: bold
+}
+
+form a:hover {
+    color: grey;
+    text-decoration: none
+}
+
+form .row {
+    margin: 0;
+    overflow: hidden
+}
+
+form .row-1 {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    min-width: unset;
+    border-radius: 5px;
+    background-color: rgba(221, 228, 236, 0.301);
+    border-color: rgba(221, 228, 236, 0.459);
+    margin: 2vh 0;
+    overflow: hidden
+}
+
+form .row-2 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 0.8rem
+}
+
+form .row .row-2 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 0.8rem
+}
+
+form .row .col-2,
+.col-7,
+.col-3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 1vh
+}
+
+form .row .col-2 {
+    padding-right: 0
+}
+
+#card-header {
+    font-weight: bold;
+    font-size: 0.9rem
+}
+
+#card-inner {
+    font-size: 0.7rem;
+    color: gray
+}
+
+.three .col-7 {
+    padding-left: 0
+}
+
+.three {
+    overflow: hidden;
+    justify-content: space-between
+}
+
+.three .col-2 {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    min-width: unset;
+    border-radius: 5px;
+    background-color: rgba(221, 228, 236, 0.301);
+    border-color: rgba(221, 228, 236, 0.459);
+    margin: 2vh 0;
+    width: fit-content;
+    overflow: hidden
+}
+
+.three .col-2 input {
+    font-size: 0.7rem;
+    margin-left: 1vh
+}
+
+.btn {
+    width: 100%;
+    background-color: rgb(65, 202, 127);
+    border-color: rgb(65, 202, 127);
+    color: white;
+    justify-content: center;
+    padding: 2vh 0;
+    margin-top: 3vh
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none
+}
+
+.btn:hover {
+    color: white
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+input:focus:-moz-placeholder {
+    color: transparent
+}
+
+input:focus::-moz-placeholder {
+    color: transparent
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent
+}</style>
+                                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                
+                          
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" >
+  
+   
+    
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+ <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
+
+                                </head>
+                            
+                            
+                            
+                                <body oncontextmenu='return false' class='snippet-body'>
+                                    
+                                     <header >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background: #101112;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="wallet.php">  <i class="fas fa-arrow-left" style="width=32; height=32;margin-right: 4px;"></i>Redeem Gift Voucher</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="userindex.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assets/aboutus.php">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="assets/Contactus.php" tabindex="-1" aria-disabled="true">contact us</a>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+</header><div class="bd-example"><div class="bd-example"><div class="bd-example">
+                                    
+                                    
+                                <div class="card mt-50 mb-50">
+    <div class="card-title mx-auto"><?php echo $_SESSION['uid']; ?> </div>
+    <div class="nav">
+        <ul class="mx-auto">
+            
+            <li class="active"><a href="#">Get rewarded by Rz coin by Redeeming Voucher code</a></li>
+        </ul>
+    </div>
+    <form onsubmit="thanks()" action="withdrawal.php" method="POST"> 
+      
+         
+        
+        <span id="card-header">Voucher code:</span>
+        <div class="row-1">
+            <div class="row row-2"> <span id="card-inner">Enter code</span> </div>
+            <div class="row row-2"> <input type="text" type="tel" id="phone" name="call"  maxlength = "11" placeholder="" required> </div>
+        </div>
+        <p style="font-size :12px;margin-left: 10px;color:purple;font-weight:500;cursor:pointer;" onclick="terms()"> Terms & privacy policy </p>
+        
+      
+        
+         
+
+        
+        
+      
+        
+        
+        
+        
+        <button type="submit" class="btn d-flex mx-auto" onclick="myFunction()"><b>Redeem Code</b></button>
+        
+        
+    
+    </form>
+</div>
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript'></script>
+                                    
+                                    <script>
+                                        function thanks(){
+                                            window.open("https://rozjeeto.live/thankyou_pay.html","_parent");
+                                        }
+									function terms(){
+												 window.open("https://rozjeeto.live/thankyou_pay.html","_parent");
+																	}
+</script>
+                                </body>
+                            </html>

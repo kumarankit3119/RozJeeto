@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+      
+      <script>  
+    function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+    
+    
+    </script>
+<style>
+    
+    .popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+ 
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:95%;
+  max-width:500px;
+  height:250px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+ 
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+ 
+.popup.active .overlay {
+  display:block;
+}
+ 
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+ 
+button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:15px;
+  font-size:18px;
+  border:2px solid #222;
+  color:#222;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#fff;
+}
+JavaScript
+</style>
+      
+      
+      <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/headers.css" rel="stylesheet">
+     
+  </head>
+  <body style="background: 	#C0C0C0;" >
+   
+<div class="popup" id="popup-1">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup()">×</div>
+    <h2>Not Enough money </h2><hr>
+    <p>
+Cash Balance: ₹
+0.00 <br>
+      Winnings: ₹    
+0.00<br>
+        RZ cash: ₹
+0.00
+      
+      </p><br>
+       <button type="button" class="btn btn-warning" style="max-height: 40px;margin-top: 70px;">Add Cash </button>
+  </div>
+</div>
+ 
+   <div class="container ">
+     
+           <h3 style="margin-bottom: 15px;">Confirm payment </h3>
+           
+       <div class="col">
+            <div class="card">
+              <div class="card-header" style="align-content: center;text-align: center;">
+                 
+                <i class="fas fa-chess-queen fa-1x " style="color: hotpink;"></i>&nbsp;vs&nbsp;<i class="fas fa-chess-queen fa-1x " style="color: hotpink;"></i>
+              </div>
+              <div class="card-body" style="display:inline-block;">
+                  
+                <h4 class="card-title" ><b>Pay <i class="fas fa-rupee-sign" style="color: blue;"></i>&nbsp;20 & Play </b></h4>
+                <p  style="text-align: center;"><b>Team name -dynamo </b> <br>
+                    Game name -pubg
+                    <br>
+                     Time slot  -9:00-10:15 AM
+                  </p>
+                  
+                  <hr>
+                  
+                  <p  style="text-align: center;">
+                      player1 id -dyna11 <br>
+                      player2 id -dyna03 <br>
+                      player3 id -dyna31 <br> 
+                      player4 id -dyna43
+                  
+                  </p>
+                  <hr>
+              
+                  <h6 style="text-align: center;">Available balance </h6>
+                  <div class="card-footer text-muted" style="text-align: center;">
+              Cash Balance - ₹7<br>
+                      Winnings - ₹7<br>
+                      RZ cash -₹7
+              </div>
+                <a href="#" class="btn btn-success" style="margin: 0;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: 3px solid green;" onclick="togglePopup()">Pay & Register</a>
+                  
+                  
+              </div>
+                
+              
+            </div>
+          </div>
+      
+      
+       
+       
+</div>
+<main>
+</main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+      <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/headers.css" rel="stylesheet">
+     
+  </head>
+  <body style="background: 	#C0C0C0;" >
+   
+   <div class="container ">
+     
+           <h3 style="margin-bottom: 15px;">Create Team </h3>
+           
+       <div class="col">
+            <div class="card">
+              <div class="card-header" style="align-content: center;text-align: center;">
+                 
+                BATTLE
+              </div>
+              <div class="card-body" style="display:inline-block;">
+                  
+                <h4 class="card-title" ><b>Fill your team details </b></h4><p>you'll be the captain of team </p>
+              
+                  
+             
+                   <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Team name</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="" placeholder="i.e dynamo " required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+               
+                        <fieldset class="col-md-4">
+                             <label for="validationServer02" class="form-label">Game name</label>
+          
+            <div class="form-check">
+              <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+              <label class="form-check-label" for="exampleRadio1">PUBG</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+              <label class="form-check-label" for="exampleRadio2">FREE-FIRE</label>
+            </div>
+                             <div class="valid-feedback">
+              Looks good!
+            </div>
+          </fieldset>
+                       
+        
+                       
+                       <hr><br>
+          <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Player1 Userid</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please choose a userid.
+              </div>
+            </div>
+          </div><br>
+        <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Player2 Userid</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please choose a userid.
+              </div>
+            </div>
+          </div>
+         <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label" >Player3 Userid</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please choose a userid.
+              </div>
+            </div>
+          </div>
+                        <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Player4 Userid</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please choose a userid.
+              </div>
+            </div>
+          </div>
+          
+       
+          <div class="col-12" style="display:flex;">
+            
+			 
+		
+		<div class="spinner-border text-warning" role="status" style="padding-top:5px;margin-bottom:20px;" id="Loading1">
+          <span class="visually-hidden">Loading...</span>
+		
+        </div>  <p style="color:orange;margin-left:10px;" id="Loadingop1"> </p>
+		
+		
+		 <div class="spinner-border text-danger" role="status"  id="Loading2" style="margin-bottom:20px;">
+          <span class="visually-hidden">Loading...</span>
+        </div><p style="color:orange;margin-left:10px;"  id="Loadingop2"> </p>
+		
+		
+       <div class="spinner-border text-success" role="status"  id="Loading3" style="padding-top:5px;margin-bottom:20px;">
+          <span class="visually-hidden">Loading...</span>
+        </div><p style="color:orange;margin-left:10px;"  id="Loadingop3"> </p>
+          </div>
+		   
+       
+                  
+                 <br> 
+                  
+              
+              
+                 </form>
+                <button class="btn btn-success" style="margin: 0;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: 3px solid green;width:100%" onclick="checkuserid()" id="savebtn">Save </button>
+  </div>
+            </div>
+          </div>
+      
+      
+       
+       
+</div>
+<main>
+</main>
+	<script>
+	document.getElementById("Loading1").style.display="none";
+	document.getElementById("Loading2").style.display="none";
+	document.getElementById("Loading3").style.display="none";
+	
+	
+	
+	function checkuserid(){
+	var inputBoxes = document.querySelectorAll("input[type='text']");
+	for (i = 0; i < inputBoxes.length; i++)
+	{
+    inputBoxes[i].disabled=true;  
+			inputBoxes[i].classList.add("is-valid");
+	}
+	
+	 document.getElementById("savebtn").disabled=true;
+	 console.log(document.getElementById("savebtn").disabled); // false
+	document.getElementById("Loading1").style.display="inline-block";
+	document.getElementById("Loadingop1").innerHTML="Please wait...";
+
+	setTimeout(runinspection, 2000);
+	
+	
+	}
+	function runinspection(){document.getElementById("savebtn").disabled=true;
+	document.getElementById("Loading1").style.display="none";
+	document.getElementById("Loading2").style.display="inline-block";
+	document.getElementById("Loadingop1").innerHTML="";
+	
+	document.getElementById("Loadingop2").innerHTML="Running security checks<br> on your userids...";
+		
+	setTimeout(getreport, 2000);
+	
+	}
+	function getreport(){
+	document.getElementById("Loading1").style.display="none";
+		
+	document.getElementById("Loadingop1").innerHTML="";
+	document.getElementById("Loadingop2").innerHTML="";
+	document.getElementById("Loadingop3").innerHTML="Retrieving data from server...";
+		
+	setTimeout(checkpass, 2000);
+	
+	}
+	function checkpass(){
+	document.getElementById("Loadingop3").innerHTML="checking suspicious activities...";
+	document.getElementById("Loading2").style.display="none";
+		document.getElementById("Loading3").style.display="inline-block";
+			
+		setTimeout(ispass, 3000);
+	}
+	function ispass(){
+		
+	document.getElementById("Loadingop3").innerHTML="No issues found...";
+	document.getElementById("Loadingop3").style.color="green";
+		
+	setTimeout(allchecksdone, 2000);
+	}
+	function allchecksdone(){
+		
+	document.getElementById("Loadingop3").innerHTML="Redirecting to the next page...";
+	setTimeout(redirect, 2000);
+	}
+	function redirect(){
+		
+	window.open("rozjeeto.live","_parent");
+	}
+	
+	</script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

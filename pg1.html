@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+      <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/headers.css" rel="stylesheet">
+     
+      <style>
+      .form{
+        float:left;  
+          list-style:none;
+          }
+          .hidden-form{
+              visibility:hidden;
+        }
+          .show-form{
+              visibility: visible !important;
+          }
+      
+      </style>
+      
+  </head>
+    
+  <body style="background: 	#C0C0C0;" >
+       
+<header >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background: #101112;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">  <i class="fas fa-arrow-left" style="width=32; height=32;margin-right: 4px;"></i> back</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">contact us</a>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <br>
+   <div class="container ">
+     
+           <h3 style="margin-bottom: 15px;text-align: center;">Select user </h3>
+           
+       <div class="col">
+            <div class="card">
+              
+                
+              <div class="card-body" >
+                  <form class="col-12" style="display: grid; ">
+             <div class="col-md-4">
+            <label for="validationServer01" class="form-label"></label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="" placeholder="Enter player name " style="display: inline-flex;
+    width: 100%;" required>
+                
+                 <br>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                      <ul class="form" style="margin-top: 10px;">
+                          <li>  <label class="form-check-label" for="exampleRadio1">E-mail&nbsp;</label> 
+                              <input class="form-btn" type="radio" name="name" value="Name" > 
+                              <input class="hidden-form" type="email" id="email"
+                                     pattern="[^ @]*@[^ @]*" size="30" required>
+                          </li>
+                      </ul> 
+                      <ul class="form" >
+                          
+                          <li> <label class="form-check-label" for="exampleRadio1">Mob no.</label> 
+                              <input class="form-btn" type="radio" name="number" value="number " >
+                              <input class="hidden-form" type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                          </li>
+                      </ul> 
+                      
+                      
+                      </div> 
+                      
+                    
+                  
+                       
+                      
+                  <div class="col-12" style="margin-top: : 20px;">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+                  </form>
+                  
+                  
+              </div>
+                
+              
+            </div>
+          </div>
+      
+      
+       
+       
+</div>
+
+      <script>
+      $('.form-btn').click(function(){
+      $(this).next().toggleClass('show-form');
+        });
+      </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

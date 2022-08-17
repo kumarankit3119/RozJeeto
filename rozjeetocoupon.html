@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Gaming Website Rozjeeto ">
+    <meta name="Rozjeeto" content=" Gaming Website Rozjeeto ">
+   
+    <title>Rozjeeto</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    
+      
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;}
+         @media (min-width: 768px) { .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }}
+    </style>
+    
+ <style>
+      .w-25 {
+    width: 60% !important;
+}
+      </style>
+      <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/headers.css" rel="stylesheet">
+        <link href="" rel="stylesheet">
+     
+      
+      
+  </head>
+  <body style="background: 	#C0C0C0;" >
+    <header >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background: #101112;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="wallet.php">  <i class="fas fa-arrow-left" style="width=32; height=32;margin-right: 4px;"></i>withdraw history </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="userindex.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assets/aboutus.php">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="assets/Contactus.php" tabindex="-1" aria-disabled="true">contact us</a>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+</header>
+   <div class="container ">
+     
+           <h6 style="margin-bottom: 15px;margin-top: 10px;color:darkblue;">Note* Withdrawal takes 24hours for sattlement</h6>
+           
+       <div class="col" id="txncard">
+            <div class="card" style="border-radius: 20px;margin-bottom: 20px;" >
+              <div class="card-header" style="align-content: center;text-align: center;">
+                 
+                &nbsp;<b>29-06-2021</b>&nbsp;
+                  
+              </div>
+              <div class="card-body" style="display:inline-block;">
+                 
+                  <h6 style="text-align: center;color: black;margin-top: 5px;"><b>&nbsp;Withdraw into  - 821987543 </b></h6>
+                  
+                  
+                   <h6 style="text-align: center;color: black;"><b>&nbsp;Txn id - 2345768923</b></h6>
+                  
+                    <h6 style="text-align: center;color: black;"><b>&nbsp;Amount -₹ 20</b></h6>
+                  
+                   <h6 style="text-align: center;color: black;"><b>staus -</b><b  id="status12" >&nbsp;</b></h6>
+               
+            
+            </div>
+          </div></div>
+       
+           
+      </div>
+     
+       
+     
+
+  <script>
+        var txns=1;
+      if(txns<1){
+          document.getElementById("txncard").style.display  = "none";
+          document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No transactions found!!");
+         
+      }
+      
+      
+var status=1;
+      
+      if(status==1){
+          document.getElementById("status12").innerHTML = " Approved ";
+          document.getElementById("status12").style.color = "green";
+      }
+        else{
+             document.getElementById("status12").innerHTML = " Pending";
+            document.getElementById("status12").style.color = "red";
+        }
+
+</script>
+      
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
